@@ -13,6 +13,7 @@ from models.engine.db_storage import DBStorage
 from models.engine.file_storage import FileStorage
 storage = console.storage
 
+
 @unittest.skipIf(os.getenv('HBNB_TYPE_STORAGE') == 'db', 'test FS mode')
 class TestHBNBCommand(unittest.TestCase):
     """Unittests for testing the HBNB command interpreter."""
