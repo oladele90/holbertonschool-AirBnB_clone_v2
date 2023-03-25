@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""C is Fun Module"""
+"""Third flask module that handles the /c/<text> module"""
 from flask import Flask
 
 
@@ -21,7 +21,7 @@ def hbnb():
 @app.route("/c/<text>", strict_slashes=False)
 def c_text(text):
     """return C <text> for /c/<text> url and replace "_" with " " """
-    return f"C {text.replace('_', ' ')}"
+    return ("C {}".format(text.replace('_', ' ')))
 
 
 if __name__ == '__main__':
