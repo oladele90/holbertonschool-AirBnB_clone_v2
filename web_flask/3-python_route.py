@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route("/python", defaults={"text": "is_cool"})
 @app.route("/python/", defaults={"text": "is_cool"})
 def python_text(text):
-    """return Python <text> for /python/<text> url with defoult value for text"""
+    """return Python <text> for /python/<text> url"""
     return ("Python {}".format(text.replace("_", " ")))
 
 
