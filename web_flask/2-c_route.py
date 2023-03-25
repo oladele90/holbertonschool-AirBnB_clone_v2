@@ -20,8 +20,7 @@ def hbnb():
 
 @app.route("/c/<text>", strict_slashes=False)
 def c_text(text):
-    """return C <text> for /c/<text> url
-    and replace "_" with " " """
+    """return C <text> for /c/<text> url and replace "_" with " " """
     return f"C {text.replace('_', ' ')}"
 
 
