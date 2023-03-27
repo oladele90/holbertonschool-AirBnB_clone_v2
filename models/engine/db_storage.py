@@ -35,7 +35,7 @@ class DBStorage:
             Base.metadata.drop_all(self.__engine)
 
     def all(self, cls=None):
-
+        """all method"""
         classes = {"User": User, "State": State,
                    "City": City, "Amenity": Amenity,
                    "Place": Place, "Review": Review}
@@ -55,16 +55,20 @@ class DBStorage:
         return object_dict
 
     def new(self, obj=None):
+        """new method"""
         self.__session.add(obj)
 
     def save(self):
+        """save method"""
         self.__session.commit()
 
     def delete(self, obj=None):
+        """delete method"""
         if obj is not None:
             self.__session.delete(obj)
 
     def reload(self):
+        """reload method"""
         Base.metadata.create_all(self.__engine)
         self.__session = scoped_session(sessionmaker(
             bind=self.__engine, expire_on_commit=False))
