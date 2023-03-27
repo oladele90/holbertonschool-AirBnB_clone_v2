@@ -70,4 +70,5 @@ class DBStorage:
             bind=self.__engine, expire_on_commit=False))
 
     def close(self):
+        """close method"""
         self.remove(self.__session)
